@@ -68,6 +68,7 @@ def gagner (table):
 
 while gagner (plateau) == False:
 	jouer(plateau)
+	dame(plateau)
 
 ## Test de la fonction gagner sur le plateau test
 ##while gagner (plateau_test) == False:

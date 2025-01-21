@@ -73,3 +73,12 @@ while gagner (plateau) == False:
 ##while gagner (plateau_test) == False:
 	##jouer(plateau_test)
 
+def dame(table):
+    "fonction qui permet de trasformer les pions qui arrivent a l'autre bout du plateau en dames."
+    for j in range(len(table)):
+        if table[0][j] == 2:
+            table[0][j] = 4
+    for j in range(len(table)):
+        if table[9][j] == 1:
+            table[9][j] = 3
+

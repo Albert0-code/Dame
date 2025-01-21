@@ -2,6 +2,9 @@
 #                                                                                                               Jeu de dame                                                                                                                                                        #
 #################################################################################
 
+'Bienvenue dans une nouvelle partie de jeu de dame'
+
+
 plateau = [[1,0,1,0,1,0,1,0,1,0],
            [0,1,0,1,0,1,0,1,0,1],
            [1,0,1,0,1,0,1,0,1,0],
@@ -50,13 +53,6 @@ def gagner (table):
     else :
         False
 
-while gagner (plateau_test) == False:
-    jouer(plateau_test)
+while gagner (plateau) == False:
+    jouer(plateau)
 
-
-plateau_test = [[1,0,1,0,1,0,1,0,1,0],
-           [0,1,0,1,0,1,0,1,0,1],
-           [1,0,1,0,1,0,1,0,1,0],
-           [0,1,0,1,0,1,0,1,0,1],
-           [0,0,0,0,0,0,0,0,0,0],
-           [0,0,0,0,0,0,0,0,0,0]]

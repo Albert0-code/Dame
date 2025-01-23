@@ -49,6 +49,7 @@ def jouer (table,nb_joueur):
 	  	print(table)
 
 def gagner (table):
+	"fonction qui permet de mettre fin à la partie quand un joueur n'a plus de pions en jeu."
 	compteur_1=0
 	compteur_2=0
 	for i in range (len(table)):

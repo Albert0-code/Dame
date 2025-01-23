@@ -16,13 +16,17 @@ plateau = [[1,0,1,0,1,0,1,0,1,0],
            [2,0,2,0,2,0,2,0,2,0],
            [0,2,0,2,0,2,0,2,0,2]]
 
-## Test pour savoir si la fonction gagner marche
+### Test pour savoir si la fonction gagner marche
 ##plateau_test = [[1,0,1,0,1,0,1,0,1,0],
 ##           [0,1,0,1,0,1,0,1,0,1],
 ##           [1,0,1,0,1,0,1,0,1,0],
 ##           [0,1,0,1,0,1,0,1,0,1],
 ##           [0,0,0,0,0,0,0,0,0,0],
 ##           [0,0,0,0,0,0,0,0,0,0]]
+
+### Test de la fonction gagner sur le plateau test
+##while gagner (plateau_test) == False:
+	##jouer(plateau_test)
 
 
 def jouer (table,nb_joueur):
@@ -67,14 +71,6 @@ def gagner (table):
 			else :
 				False
 
-while gagner (plateau) == False:
-	jouer(plateau)
-	dame(plateau)
-
-## Test de la fonction gagner sur le plateau test
-##while gagner (plateau_test) == False:
-	##jouer(plateau_test)
-
 def dame(table):
     "fonction qui permet de trasformer les pions qui arrivent a l'autre bout du plateau en dames."
     for j in range(len(table)):
@@ -83,4 +79,13 @@ def dame(table):
     for j in range(len(table)):
         if table[9][j] == 1:
             table[9][j] = 3
+		
+
+while gagner(plateau) == False:
+	jouer(plateau)
+	dame(plateau)
+
+
+
+
 

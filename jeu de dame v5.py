@@ -4,6 +4,15 @@
 
 'Bienvenue dans une nouvelle partie de jeu de dame'
 
+'Le jeu de dames se joue sur un plateau de 10x10 cases, chaque joueur disposant de 20 pièces placées sur les cases noires des quatre premières rangées
+'Le but du jeu est de capturer toutes les pièces adverses ou de les empêcher de jouer'
+'Les pièces se déplacent en diagonale, d une seule case à la fois'
+'Lorsqu une pièce se trouve devant une pièce adverse, elle peut sauter par-dessus celle-ci pour la capturer, à condition que la case suivante soit vide'
+'Le saut est obligatoire lorsqu il est possible, et un joueur peut effectuer plusieurs sauts dans un même tour, tant que chaque saut respecte les règles'
+'Lorsqu une pièce atteint la dernière rangée du côté adverse, elle est promue en dame'
+'La dame a la capacité de se déplacer sur plusieurs cases à la fois, toujours en diagonale, et peut sauter par-dessus plusieurs pièces dans une seule prise'
+'Le jeu se termine lorsqu un joueur capture toutes les pièces adverses ou bloque l adversaire de manière à ce qu il ne puisse plus jouer'
+'Si aucune des deux situations ne se produit, la partie peut être déclarée nulle'
 
 plateau = [[1,0,1,0,1,0,1,0,1,0],
            [0,1,0,1,0,1,0,1,0,1],

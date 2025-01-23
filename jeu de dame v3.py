@@ -62,14 +62,14 @@ def gagner (table):
 				compteur_1 += 1
 			if table[i][j] == 2 :
 				compteur_2 += 1
-			if compteur_1 == 0:
-				print("La joueur 2 a gagné !")
-				True
-			elif compteur_2 == 0:
-				print("La joueur 1 a gagné !")
-				True
-			else :
-				False
+	if compteur_1 == 0:
+		print("La joueur 2 a gagné !")
+		True
+	elif compteur_2 == 0:
+		print("La joueur 1 a gagné !")
+		True
+	else :
+		False
 
 def dame(table):
     "fonction qui permet de trasformer les pions qui arrivent a l'autre bout du plateau en dames."

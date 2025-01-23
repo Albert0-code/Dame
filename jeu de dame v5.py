@@ -4,7 +4,7 @@
 
 'Bienvenue dans une nouvelle partie de jeu de dame'
 
-'Le jeu de dames se joue sur un plateau de 10x10 cases, chaque joueur disposant de 20 pièces placées sur les cases noires des quatre premières rangées
+'Le jeu de dames se joue sur un plateau de 10x10 cases, chaque joueur disposant de 20 pièces placées sur les cases noires des quatre premières rangées'
 'Le but du jeu est de capturer toutes les pièces adverses ou de les empêcher de jouer'
 'Les pièces se déplacent en diagonale, d une seule case à la fois'
 'Lorsqu une pièce se trouve devant une pièce adverse, elle peut sauter par-dessus celle-ci pour la capturer, à condition que la case suivante soit vide'

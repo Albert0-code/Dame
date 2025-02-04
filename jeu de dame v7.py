@@ -4,16 +4,15 @@
 
 'Bienvenue dans une nouvelle partie de jeu de dame'
 
+plateau = []
 
 def initialisation(ligne,colonne,ligne_occupee):
     """Fonction qui prend en argument un nombre de ligne, de colonne et de ligne
     occupée par chaque camp au debut de la partie et qui créer le plateau de jeu."""
-    plateau = []
     for i in range(ligne):
         plateau.append([])
         for j in range(colonne):
             plateau[i].append(0)
-            
     for i in range(ligne):
         for j in range(i % 2, colonne, 2):
             if i < ligne_occupee:
@@ -135,16 +134,17 @@ def manger(table,nb_joueur,ligne_depart,colonne_depart):
 ##while gagner (plateau_test) == False:
 	##jouer(plateau_test)
 
-"Test pour savoir si la fonction manger marche"
-plateau_test1 = [[1,0,1,0,1,0,1,0,1,0],
-           [0,1,0,1,0,1,0,1,0,1],
-           [1,0,1,0,1,0,1,0,1,0],
-           [0,1,0,1,0,1,0,1,0,1],
-           [0,0,2,0,0,0,0,0,0,0],
-           [0,0,0,0,0,0,0,0,0,0]]
+##"Test pour savoir si la fonction manger marche"
+##plateau_test1 = [[1,0,1,0,1,0,1,0,1,0],
+##           [0,1,0,1,0,1,0,1,0,1],
+##           [1,0,1,0,1,0,1,0,1,0],
+##           [0,1,0,1,0,1,0,1,0,1],
+##           [0,0,2,0,0,0,0,0,0,0],
+##           [0,0,0,0,0,0,0,0,0,0]]
+##
+##while gagner(plateau_test1) == False:
+##	jouer(plateau_test1)
 
-while gagner(plateau_test1) == False:
-	jouer(plateau_test1)
 
 
 

@@ -41,7 +41,7 @@ def jouer (table : list):
         voir(table)
 
 
-def gagner(table) : list)
+def gagner(table : list)
     "Cette fonction permet de mettre fin à la partie quand un joueur n'a plus de pions en jeu"
     compteur_1=0
     compteur_2=0

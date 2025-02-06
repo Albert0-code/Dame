@@ -26,7 +26,7 @@ def initialisation(ligne : int ,colonne : int ,ligne_occupee : int):
 def jouer (table : list):
 	"""Fonction qui prend en argument le plateau et qui permet de jouer"""
     voir(table)
-    nb_joueur = int(input("Quelle est votre numéro de joueur ?"))
+	nb_joueur = int(input("Quelle est votre numéro de joueur ?"))
     "Je demande quelle pion le joueur veut déplacer et à quelle endroit"
     ligne_depart = int(input("Quelle est la ligne du pion que vous voulez déplacer ?"))-1
     colonne_depart = int(input("Quelle est sa colonne ?"))-1

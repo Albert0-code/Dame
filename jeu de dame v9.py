@@ -30,7 +30,7 @@ def jouer (table : list):
     "Je demande quelle pion le joueur veut déplacer et à quelle endroit"
     ligne_depart = int(input("Quelle est la ligne du pion que vous voulez déplacer ?"))-1
     colonne_depart = int(input("Quelle est sa colonne ?"))-1
-    verification(table,nb_joueur,ligne_depart,colonne_depart)
+    #verification(table,nb_joueur,ligne_depart,colonne_depart)
     if manger(table,nb_joueur,ligne_depart,colonne_depart) != True :
         ligne_arriver = int(input("Vers quelle ligne ?"))-1
         colonne_arriver = int(input("Vers quelle colonne ?"))-1

@@ -45,7 +45,8 @@ def jouer (table : list):
 
 
 def gagner(table : list):
-    "Cette fonction permet de mettre fin à la partie quand un joueur n'a plus de pions en jeu"
+    """Fonction qui prend en argument le plateau et qui permet de
+    mettre fin à la partie quand un joueur n'a plus de pions en jeu."""
     compteur_1=0
     compteur_2=0
     for i in range (len(table)):
@@ -64,7 +65,8 @@ def gagner(table : list):
         return False
 
 def dame(table : list):
-    "Cette fonction permet de transformer les pions qui arrivent a l'autre bout du plateau en dames"
+    """Fonctionqui prend en argument le plateau et qui permet de transformer
+    les pions qui arrivent a l'autre bout du plateau en dames"""
     for j in range(len(table)):
         if table[0][j] == 2:
             table[0][j] = 4
@@ -84,12 +86,15 @@ def super_dame(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : 
         return False
 
 def voir(table : list):
-    "Cette fonction permet d'écrire le plateau de jeu avec un retour à la ligne à chaque fin de ligne"
+    """Fonction qui prend en argument le plateau et qui permet d'afficher
+    le plateau de jeu avec un retour à la ligne à chaque fin de ligne"""
     for i in range (len(table)):
         print(table[i])
 
 def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
-    "Cette fonction vérifie si le joueur n'essaie pas de déplacer le pion d'un autre joueur ou qu'il n'y a pas de pion sur la case"
+     """Fonction qui prend en argument le plateau, le numéro du joueur et le coup qui va etre joue
+    et qui vérifie si le joueur n'essaie pas de déplacer le pion d'un autre joueur
+    ou qu'il n'y a pas de pion sur la case"""
     while nb_joueur != table[ligne][colonne]:
         print("""Vous ne pouvez pas déplacer un pion de votre adversaire ou la case 
         que vous avez donnez est vide""")
@@ -100,6 +105,8 @@ def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
         
 
 def manger(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int):
+	"""Fonction qui prend en argument le tableau, le numero du joueur et la position du pion qui veut etre joue
+    et qui nous dit si on doit manger un pion de l'adversaire au lieu de jouer ce coup."""
     if nb_joueur == 1 :
         if table[ligne_depart+1][colonne_depart+1] == 2 :                
             print("Vous devez mangé un pion de l'adversaire")

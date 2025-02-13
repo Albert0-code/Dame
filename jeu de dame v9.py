@@ -100,7 +100,7 @@ def voir(table : list):
         print(table[i])
 
 def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
-     """Fonction qui prend en argument le plateau, le numéro du joueur et le coup qui va etre joue
+    """Fonction qui prend en argument le plateau, le numéro du joueur et le coup qui va etre joue
     et qui vérifie si le joueur n'essaie pas de déplacer le pion d'un autre joueur
     ou qu'il n'y a pas de pion sur la case"""
     while nb_joueur != table[ligne][colonne]:

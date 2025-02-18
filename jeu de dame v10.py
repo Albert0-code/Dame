@@ -13,6 +13,7 @@
 'Le jeu se termine lorsqu un joueur capture toutes les pièces adverses ou bloque l adversaire de manière à ce qu il ne puisse plus jouer'
 'Si aucune des deux situations ne se produit, la partie peut être déclarée nulle'
 
+
 plateau = []
 
 def initialisation(ligne : int ,colonne : int ,ligne_occupee : int):

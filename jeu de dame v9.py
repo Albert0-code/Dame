@@ -171,16 +171,16 @@ def manger(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int)
 ##while gagner(plateau_test1) == False:
 ##	jouer(plateau_test1)
 
-"Test pour savoir si la fonction dame marche"
-plateau_test1 = [[1,0,1,0,1,0,1,0,1,0],
-           [0,0,0,0,0,0,0,0,0,0],
-           [0,0,0,0,0,0,3,0,0,0],
-           [0,0,0,0,0,0,0,0,0,0],
-           [0,0,2,0,0,0,0,0,3,0],
-           [0,0,0,0,0,0,0,0,0,0]]
-
-while gagner(plateau_test1) == False:
-	jouer(plateau_test1)
+##"Test pour savoir si la fonction dame marche"
+##plateau_test1 = [[1,0,1,0,1,0,1,0,1,0],
+##           [0,0,0,0,0,0,0,0,0,0],
+##           [0,0,0,0,0,0,0,0,0,0],
+##           [0,0,0,0,0,0,0,0,0,0],
+##           [0,0,2,0,0,0,0,0,1,0],
+##           [0,0,0,0,0,0,0,0,0,0]]
+##
+##while gagner(plateau_test1) == False:
+##	jouer(plateau_test1)
 
 
 

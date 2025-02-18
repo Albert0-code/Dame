@@ -22,8 +22,8 @@ def initialisation(ligne : int ,colonne : int ,ligne_occupee : int):
         ligne_occupee=int(input('Veuillez choisir un nombre de ligne valide '))
 	for i in range(ligne):
         plateau.append([])
-    for j in range(colonne):
-        plateau[i].append(0)
+    	for j in range(colonne):
+        	plateau[i].append(0)
     for i in range(ligne):
         for j in range(i % 2, colonne, 2):
             if i < ligne_occupee:

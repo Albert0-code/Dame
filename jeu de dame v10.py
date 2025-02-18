@@ -14,6 +14,7 @@
 'Si aucune des deux situations ne se produit, la partie peut être déclarée nulle'
 
 
+
 plateau = []
 
 def initialisation(ligne : int ,colonne : int ,ligne_occupee : int):

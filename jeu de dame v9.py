@@ -114,7 +114,7 @@ def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
 
 def manger(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int):
 	"""Fonction qui prend en argument le tableau, le numero du joueur et la position du pion qui veut etre joue
-    et qui nous dit si on doit manger un pion de l'adversaire au lieu de jouer ce coup."""
+	et qui nous dit si on doit manger un pion de l'adversaire au lieu de jouer ce coup."""
     if nb_joueur == 1 :
         if table[ligne_depart+1][colonne_depart+1] == 2 :                
             print("Vous devez mangé un pion de l'adversaire")

@@ -18,7 +18,9 @@ plateau = []
 def initialisation(ligne : int ,colonne : int ,ligne_occupee : int):
     """Fonction qui prend en argument un nombre de ligne, de colonne et de ligne
     occupée par chaque camp au debut de la partie et qui créer le plateau de jeu."""
-    for i in range(ligne):
+    while ligne/2 < ligne_occupee :
+        ligne_occupee=int(input('Veuillez choisir un nombre de ligne valide '))
+	for i in range(ligne):
         plateau.append([])
         for j in range(colonne):
             plateau[i].append(0)

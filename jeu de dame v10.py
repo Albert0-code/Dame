@@ -52,7 +52,7 @@ def jouer (table : list):
         else :
             table[ligne_arriver][colonne_arriver] = table[ligne_depart][colonne_depart]
             table[ligne_depart][colonne_depart] = 0
-    dame(plateau_test1)
+    dame(table)
     voir(table)
 
 

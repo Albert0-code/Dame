@@ -2,16 +2,20 @@
 #                                                                                                               Jeu de dame                                                                                                                                                        #
 #################################################################################
 
-'Bienvenue dans une nouvelle partie de jeu de dame'
-'Le jeu de dames se joue sur un plateau de 10x10 cases, chaque joueur disposant de 20 pièces placées sur les cases noires des quatre premières rangées'
-'Le but du jeu est de capturer toutes les pièces adverses ou de les empêcher de jouer'
-'Les pièces se déplacent en diagonale, d une seule case à la fois'
-'Lorsqu une pièce se trouve devant une pièce adverse, elle peut sauter par-dessus celle-ci pour la capturer, à condition que la case suivante soit vide'
-'Le saut est obligatoire lorsqu il est possible, et un joueur peut effectuer plusieurs sauts dans un même tour, tant que chaque saut respecte les règles'
-'Lorsqu une pièce atteint la dernière rangée du côté adverse, elle est promue en dame'
-'La dame a la capacité de se déplacer sur plusieurs cases à la fois, toujours en diagonale, et peut sauter par-dessus plusieurs pièces dans une seule prise'
-'Le jeu se termine lorsqu un joueur capture toutes les pièces adverses ou bloque l adversaire de manière à ce qu il ne puisse plus jouer'
-'Si aucune des deux situations ne se produit, la partie peut être déclarée nulle'
+print('Le jeu de dames se joue sur un plateau de 10x10 cases, '
+'chaque joueur disposant de 20 pièces placées sur \nles cases noires des quatre premières rangées.\nLe but du jeu est '
+'de capturer toutes les pièces adverses ou de les empêcher de jouer.\nLes pièces se déplacent en diagonale, '
+'d\'une seule case à la fois.\nLorsqu\'une pièce se trouve devant une pièce adverse, '
+'elle peut sauter par-dessus celle-ci pour la capturer, \nà condition que la case suivante soit vide.\nLe saut est '
+'obligatoire lorsqu\'il est possible, et un joueur peut effectuer plusieurs sauts dans un même tour, \n'
+'tant que chaque saut respecte les règles.\nLorsqu\'une pièce atteint la dernière rangée du côté adverse, '
+'elle est promue en dame.\nLa dame a la capacité de se '
+'déplacer sur plusieurs cases à la fois, toujours en diagonale, '
+'et peut sauter \npar-dessus plusieurs pièces dans une seule prise.\nCette version du jeu de dame est améliorée car '
+'vous pouvez fusionner deux dames pour former une super dame qui \nse déplace également en diagonale.'
+'\nLe jeu se termine lorsqu\'un joueur capture '
+'toutes les pièces adverses ou bloque l\'adversaire de manière à \nce qu\'il ne puisse plus jouer.\nSi '
+'aucune des deux situations ne se produit, la partie peut être déclarée nulle.')
 
 
 
@@ -75,19 +79,18 @@ def gagner(table : list):
         return False
 
 def dame(table : list):
-    """Fonctionqui prend en argument le plateau et qui permet de transformer
+    """Fonction qui prend en argument le plateau et qui permet de transformer
     les pions qui arrivent a l'autre bout du plateau en dames"""
-    for j in range(len(table)):
+    for j in range(len(table[0])):
         if table[0][j] == 2:
             table[0][j] = 4
             print("Votre pion s'est transformé en dame")
-    for j in range(len(table)):
         if table[len(table)-1][j] == 1:
             table[len(table)-1][j] = 3
             print("Votre pion s'est transformé en dame")
 
-def super_dame(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int,\
-               ligne_arriver : int,colonne_arriver : int):
+def super_dame(table : list, nb_joueur : int, ligne_depart : int, colonne_depart : int, \
+               ligne_arriver : int, colonne_arriver : int):
     "Cette fonction permet de transformer les dames d'un même joueur qui se rencontrent en super dame"
     "Elles peuvent se déplacer dans toutes les directions."
     if table[ligne_arriver][colonne_arriver] == table[ligne_depart][colonne_depart] == nb_joueur + 2:
@@ -101,7 +104,7 @@ def voir(table : list):
     for i in range (len(table)):
         print(table[i])
 
-def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
+def verification(table : list, nb_joueur : int, ligne : int, colonne: int):
     """Fonction qui prend en argument le plateau, le numéro du joueur et le coup qui va etre joue
     et qui vérifie si le joueur n'essaie pas de déplacer le pion d'un autre joueur
     ou qu'il n'y a pas de pion sur la case"""
@@ -114,7 +117,7 @@ def verification(table : list,nb_joueur : int,ligne : int,colonne: int):
         colonne_arriver = int(input("Vers quelle colonne ?"))-1
         
 
-def manger(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int):
+def manger(table : list, nb_joueur : int,  ligne_depart : int, colonne_depart : int):
     """Fonction qui prend en argument le tableau, le numero du joueur et la position du pion qui veut etre joue
     et qui nous dit si on doit manger un pion de l'adversaire au lieu de jouer ce coup."""
     if nb_joueur == 1 or table[ligne_depart][colonne_depart] == 3:
@@ -174,11 +177,22 @@ def manger(table : list,nb_joueur : int,ligne_depart : int,colonne_depart : int)
 ##	jouer(plateau_test1)
 
 ##"Test pour savoir si la fonction dame marche"
-##plateau_test1 = [[1,0,1,0,1,0,1,0,1,0],
-##           [0,0,0,0,0,0,0,0,0,0],
+##plateau_test1 = [[0,0,0,0,0,0,1,0,1,0],
+##           [0,2,0,0,0,0,0,0,0,0],
 ##           [0,0,0,0,0,0,0,0,0,0],
 ##           [0,0,0,0,0,0,0,0,0,0],
 ##           [0,0,2,0,0,0,0,0,1,0],
+##           [0,0,0,0,0,0,0,0,0,0]]
+##
+##while gagner(plateau_test1) == False:
+##	jouer(plateau_test1)
+
+##"Test pour savoir si la fonction superdame marche"
+##plateau_test1 = [[3,0,3,0,1,0,1,0,1,0],
+##           [0,0,0,0,0,0,0,0,0,0],
+##           [0,0,0,0,0,0,0,0,0,0],
+##           [0,0,0,0,0,0,0,3,0,0],
+##           [0,0,2,0,0,0,0,0,3,0],
 ##           [0,0,0,0,0,0,0,0,0,0]]
 ##
 ##while gagner(plateau_test1) == False:
